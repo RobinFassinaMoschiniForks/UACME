@@ -891,16 +891,15 @@ The most effective protection against UAC bypass techniques is using an account 
 UACMe is written in C and requires Microsoft Visual Studio 2019 or later to build from source.
 
 ### Prerequisites
-* **IDE**: Microsoft Visual Studio 2019 or 2022
+* **IDE**: Microsoft Visual Studio 2019/2022/2026 and later version
 * **SDK Requirements**:
-  * Windows 8.1 or Windows 10 SDK (tested with 19041 version)
-  * NET Framework SDK (tested with 4.8 version)
+  * Windows 8.1 or Windows 10/11 SDK (tested with 19041/26100 version)
 
 ### Build Steps
 
 1. **Configure Platform ToolSet** (Project->Properties->General):
-   * For Visual Studio 2019: Select v142
    * For Visual Studio 2022: Select v143
+   * For Visual Studio 2026: Select v145
 
 2. **Set Target Platform Version** (Project->Properties->General):
    * For v140: Select 8.1 (Windows 8.1 SDK must be installed)
