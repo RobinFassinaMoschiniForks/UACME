@@ -603,7 +603,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 10 (17134)
      * Fixed in: Windows 11 (22000)
         * How: Windows components redesign
-      * Code status: removed starting from v3.5.7 :tractor:
+      * Code status: added in v3.5.7
 57. Author: Leo Davidson derivative by Win32/Gapz
      * Type: Dll Hijack
      * Method: IFileOperation
@@ -858,6 +858,16 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Fixed in: unfixed :see_no_evil:
         * How: -
       * Code status: added in v3.6.8
+82. Author: WZ
+     * Type: Shell API
+     * Method: UICleanmgrAdminHelper, UICleanmgrHelper
+     * Target(s): \system32\SystemSettingsAdminFlows.exe
+     * Component(s): Action.exe
+     * Implementation: ucmCleanMgrAdminMethod
+     * Works from: Windows 10 (19041)
+     * Fixed in: unfixed :see_no_evil:
+        * How: -
+      * Code status: added in v3.7.0
 
 </details>
 
@@ -891,16 +901,15 @@ The most effective protection against UAC bypass techniques is using an account 
 UACMe is written in C and requires Microsoft Visual Studio 2019 or later to build from source.
 
 ### Prerequisites
-* **IDE**: Microsoft Visual Studio 2019 or 2022
+* **IDE**: Microsoft Visual Studio 2019/2022/2026 and later version
 * **SDK Requirements**:
-  * Windows 8.1 or Windows 10 SDK (tested with 19041 version)
-  * NET Framework SDK (tested with 4.8 version)
+  * Windows 8.1 or Windows 10/11 SDK (tested with 19041/26100 version)
 
 ### Build Steps
 
 1. **Configure Platform ToolSet** (Project->Properties->General):
-   * For Visual Studio 2019: Select v142
    * For Visual Studio 2022: Select v143
+   * For Visual Studio 2026: Select v145
 
 2. **Set Target Platform Version** (Project->Properties->General):
    * For v140: Select 8.1 (Windows 8.1 SDK must be installed)
@@ -966,6 +975,7 @@ BTC (Bitcoin): bc1qzkvtpa0053cagf35dqmpvv9k8hyrwl7krwdz84q39mcpy68y6tmqsju0g4
 * Advanced Windows Task Scheduler Playbook - Part.2 from COM to UAC bypass and get SYSTEM directly, http://www.zcgonvh.com/post/Advanced_Windows_Task_Scheduler_Playbook-Part.2_from_COM_to_UAC_bypass_and_get_SYSTEM_dirtectly.html
 * Bypassing UAC with SSPI Datagram Contexts, https://splintercod3.blogspot.com/p/bypassing-uac-with-sspi-datagram.html
 * Mitigate some Exploits for Windows’® UAC, https://skanthak.hier-im-netz.de/uacamole.html
+* Here's a BYPASS for you, https://mp.weixin.qq.com/s/D_Hchnzlv18naeJrYVJi1A
 
 # Authors
 
