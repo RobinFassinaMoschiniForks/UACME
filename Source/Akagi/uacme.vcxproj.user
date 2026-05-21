@@ -45,8 +45,8 @@
     <LocalDebuggerCommandArgumentsHistory>78|0|75|82|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugConsole|x64'">
-    <LocalDebuggerCommandArguments>41</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>82</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArgumentsHistory>80|81|0|82|41|</LocalDebuggerCommandArgumentsHistory>
+    <LocalDebuggerCommandArgumentsHistory>79|81|78|0|82|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>

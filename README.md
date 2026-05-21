@@ -37,6 +37,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
 
 
 > **Note**: Since version 3.5.0, all previously "fixed" methods are considered obsolete and have been removed. If you need them, use [v3.2.x branch](https://github.com/hfiref0x/UACME/tree/v3.2.x).
+> **Note**: As of version 3.7.0, methods "fixed" between 3.5.0 and 3.7.0 have been removed from UACMe methods table. If you need them, use the [v3.6.x_plus branch](https://github.com/hfiref0x/UACME/tree/v3.6.x_plus) The code for these methods is still available in the current branch for historical purposes.
 
 <details>
   <summary>Keys (click to expand/collapse)</summary>
@@ -260,7 +261,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: Internal Windows loader changes, consent!MitigationPolicy->ProcessSignaturePolicy->MicrosoftSignedOnly
-      * Code status: added in v2.5.0
+      * Code status: removed starting from v3.7.0 :tractor:
 23. Author: Leo Davidson derivative
      * Type: Dll Hijack
      * Method: IFileOperation
@@ -341,7 +342,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: Internal Windows loader changes
-      * Code status: added in v2.7.0
+      * Code status: removed starting from v3.7.0 :tractor:
 31. Author: Enigma0x3
      * Type: Shell API
      * Method: Registry key manipulation
@@ -403,7 +404,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: WUSA changes
-      * Code status: added in v2.7.4
+      * Code status: removed starting from v3.7.0 :tractor:
 37. Author: Ernesto Fernandez, Thomas Vanhoutte
      * Type: Dll Hijack
      * Method: SxS DotLocal, NTFS reparse point
@@ -413,7 +414,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: Internal Windows loader changes, WUSA changes
-      * Code status: added in v2.7.5
+      * Code status: removed starting from v3.7.0 :tractor:
 38. Author: Clement Rouault
      * Type: Whitelisted component
      * Method: APPINFO command line spoofing
@@ -563,7 +564,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: appinfo changes		
-      * Code status: added in v3.0.4
+      * Code status: removed starting from v3.7.0 :tractor:
 53. Author: Emeric Nasi
      * Type: Shell API
      * Method: Registry key manipulation
@@ -593,7 +594,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 10 RS5 (17763), a part of patch, 2024 year
         * How: When integrity level of an UIAccess token is lowered, the UIAccess property is removed
-      * Code status: added in v3.1.5
+      * Code status: removed starting from v3.7.0 :tractor:
 56. Author: Hashim Jawad
      * Type: Shell API
      * Method: Registry key manipulation
@@ -603,7 +604,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 10 (17134)
      * Fixed in: Windows 11 (22000)
         * How: Windows components redesign
-      * Code status: added in v3.5.7
+      * Code status: removed starting from v3.7.0 :tractor:
 57. Author: Leo Davidson derivative by Win32/Gapz
      * Type: Dll Hijack
      * Method: IFileOperation
@@ -623,7 +624,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 10 (14393)
      * Fixed in: Windows 11 24H2/25H2 (26100/26200)
         * How: Current user environment variable %windir% ignored
-      * Code status: added in v3.2.0
+      * Code status: removed starting from v3.7.0 :tractor:
 59. Author: James Forshaw
      * Type: AppInfo ALPC
      * Method: RAiLaunchAdminProcess and DebugObject
@@ -693,7 +694,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2 (26100)
         * How: Side effect of Windows changes
-      * Code status: added in v3.5.2
+      * Code status: removed starting from v3.7.0 :tractor:
 66. Author: Arush Agarampur
      * Type: Elevated COM interface
      * Method: IFwCplLua, Shell Protocol Hijack
@@ -703,7 +704,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 11 24H2 (26100)
         * How: Side effect of Windows changes
-      * Code status: added in v3.5.3
+      * Code status: removed starting from v3.7.0 :tractor:
 67. Author: Arush Agarampur
      * Type: Shell API
      * Method: Shell Protocol Hijack
@@ -734,7 +735,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * AlwaysNotify compatible
      * Fixed in: Windows 11 24H2/25H2 (26100)
         * How: Current user environment variable %windir% ignored
-      * Code status: added in v3.5.6
+      * Code status: removed starting from v3.7.0 :tractor:
 70. Author: V3ded
      * Type: Shell API
      * Method: Registry key manipulation
@@ -774,7 +775,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 RTM (7600)
      * Fixed in: Windows 11 24H2/25H2 (26100)
         * How: EventViewer redesign
-      * Code status: added in v3.6.0
+      * Code status: removed starting from v3.7.0 :tractor:
 74. Author: zcgonvh
      * Type: Elevated COM interface
      * Method: IElevatedFactoryServer
@@ -825,7 +826,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * AlwaysNotify compatible
      * Fixed in: Windows 10 (19041), a part of patch, 2024? year
         * How: Side effect of Windows changes
-      * Code status: added in v3.6.5
+      * Code status: removed starting from v3.7.0 :tractor:
 79. Author: James Forshaw and Stefan Kanthak
      * Type: GUI Hack
      * Method: UIPI bypass with token modification
@@ -835,7 +836,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * Works from: Windows 7 (7600)
      * Fixed in: Windows 10 RS5 (17763), a part of patch, 2024 year
         * How: When integrity level of an UIAccess token is lowered, the UIAccess property is removed
-      * Code status: added in v3.6.6
+      * Code status: removed starting from v3.7.0 :tractor:
 80. Author: R41N3RZUF477
      * Type: Shell API
      * Method: Environment variables expansion, Dll Hijack
@@ -846,7 +847,7 @@ akagi64.exe 61 c:\windows\system32\charmap.exe
      * AlwaysNotify compatible
      * Fixed in: Windows 11 25H2 (26200)
         * How: Side effect of Windows changes
-      * Code status: added in v3.6.7
+      * Code status: removed starting from v3.7.0 :tractor:
 81. Author: R41N3RZUF477
      * Type: Shell API
      * Method: Environment variables expansion, Dll Hijack, UIPI bypass
