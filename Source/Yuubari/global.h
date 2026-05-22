@@ -4,9 +4,9 @@
 *
 *  TITLE:       GLOBAL.H
 *
-*  VERSION:     1.61
+*  VERSION:     1.62
 *
-*  DATE:        15 May 2026
+*  DATE:        21 May 2026
 *
 *  Common header file for the program support routines.
 *
